@@ -4,16 +4,168 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description" content="Learn English, French and Portuguese online with Kilele Language School.">
-  <title>Kilele Language School</title>
+  <meta name="theme-color" content="#102a43">
+  <title>Kilele Language School | Learn Without Limits</title>
+  <style>
+    :root {
+      --navy: #102a43;
+      --blue: #176b87;
+      --teal: #20b2aa;
+      --gold: #f4b942;
+      --cream: #fbf8f1;
+      --ink: #243b53;
+      --muted: #627d98;
+      --white: #ffffff;
+    }
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body {
+      margin: 0;
+      font-family: Inter, "Segoe UI", Arial, sans-serif;
+      color: var(--ink);
+      background: var(--cream);
+      line-height: 1.65;
+    }
+    .site-header {
+      background: var(--navy);
+      color: var(--white);
+      padding: 20px 7%;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 20px;
+    }
+    .brand { color: var(--white); text-decoration: none; font-size: 1.15rem; font-weight: 800; letter-spacing: .02em; }
+    .brand span { color: var(--gold); }
+    .header-note { color: #d9e8f2; font-size: .9rem; }
+    .hero {
+      position: relative;
+      overflow: hidden;
+      padding: 92px 7% 100px;
+      background: linear-gradient(120deg, #102a43 0%, #176b87 62%, #20a39e 100%);
+      color: var(--white);
+    }
+    .hero::after {
+      content: "";
+      position: absolute;
+      width: 390px;
+      height: 390px;
+      border: 1px solid rgba(255,255,255,.16);
+      border-radius: 50%;
+      right: -95px;
+      top: -125px;
+      box-shadow: 0 0 0 42px rgba(255,255,255,.035), 0 0 0 84px rgba(255,255,255,.025);
+    }
+    .hero-content { max-width: 760px; position: relative; z-index: 1; }
+    .eyebrow {
+      display: inline-block;
+      color: var(--gold);
+      font-weight: 800;
+      letter-spacing: .15em;
+      text-transform: uppercase;
+      font-size: .78rem;
+      margin-bottom: 18px;
+    }
+    h1 { margin: 0 0 20px; font-size: clamp(2.6rem, 6vw, 4.8rem); line-height: 1.08; letter-spacing: -.045em; }
+    .hero p { max-width: 610px; color: #e4f1f7; font-size: clamp(1.05rem, 2vw, 1.25rem); margin: 0 0 30px; }
+    .button {
+      display: inline-block;
+      background: var(--gold);
+      color: var(--navy);
+      text-decoration: none;
+      padding: 14px 24px;
+      border-radius: 8px;
+      font-weight: 800;
+      box-shadow: 0 8px 20px rgba(0,0,0,.15);
+      transition: transform .2s ease, background .2s ease;
+    }
+    .button:hover { background: #ffd16f; transform: translateY(-2px); }
+    .content { max-width: 1100px; margin: -34px auto 0; padding: 0 24px 76px; position: relative; z-index: 2; }
+    .welcome-card {
+      background: var(--white);
+      border-radius: 16px;
+      padding: 32px;
+      box-shadow: 0 18px 50px rgba(16,42,67,.10);
+      border: 1px solid #e7eef3;
+      display: grid;
+      grid-template-columns: 1fr auto;
+      align-items: center;
+      gap: 24px;
+    }
+    .welcome-card h2 { margin: 0 0 8px; color: var(--navy); font-size: 1.45rem; }
+    .welcome-card p { margin: 0; color: var(--muted); }
+    .new-label { display: inline-block; padding: 6px 11px; border-radius: 999px; background: #fff4d9; color: #805b0a; font-size: .78rem; font-weight: 800; margin-bottom: 10px; }
+    .languages { padding: 58px 0 0; text-align: center; }
+    .languages h2 { color: var(--navy); font-size: 2rem; margin: 0 0 10px; }
+    .languages > p { color: var(--muted); margin: 0 0 26px; }
+    .language-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 18px; }
+    .language-card { background: var(--white); border: 1px solid #e5edf2; border-radius: 14px; padding: 25px 18px; }
+    .language-card .symbol { font-size: 1.8rem; margin-bottom: 8px; }
+    .language-card h3 { margin: 0; color: var(--navy); }
+    .language-card p { color: var(--muted); margin: 5px 0 0; font-size: .92rem; }
+    footer { background: var(--navy); color: #d9e8f2; text-align: center; padding: 24px; font-size: .9rem; }
+    footer strong { color: var(--gold); }
+    @media (max-width: 680px) {
+      .site-header { padding: 17px 6%; }
+      .header-note { display: none; }
+      .hero { padding: 72px 6% 82px; }
+      .content { padding-left: 16px; padding-right: 16px; }
+      .welcome-card { grid-template-columns: 1fr; padding: 25px; }
+      .language-grid { grid-template-columns: 1fr; }
+      .languages { padding-top: 42px; }
+    }
+  </style>
 </head>
 <body>
-  <header>
-    <h1>Kilele Language School</h1>
+  <header class="site-header">
+    <a class="brand" href="./">KILELE<span>.</span></a>
+    <div class="header-note">Language learning for a connected world</div>
   </header>
+
   <main>
-    <p>Learn English, French and Portuguese online.</p>
-    <p><strong>New for 2026:</strong> We are welcoming new learners. Register your interest today!</p>
-    <p><a href="contact.html">Register interest</a></p>
+    <section class="hero">
+      <div class="hero-content">
+        <span class="eyebrow">Kilele Language School</span>
+        <h1>Open a world of new possibilities.</h1>
+        <p>Learn English, French and Portuguese online. Build your confidence, connect across cultures, and take your next step with language skills.</p>
+        <a class="button" href="#languages">Explore our languages</a>
+      </div>
+    </section>
+
+    <div class="content">
+      <section class="welcome-card" aria-label="Welcome announcement">
+        <div>
+          <span class="new-label">NEW FOR 2026</span>
+          <h2>We are welcoming new learners!</h2>
+          <p>Start your language-learning journey with Kilele Language School. Choose a language and take the first step today.</p>
+        </div>
+        <a class="button" href="#languages">Register interest</a>
+      </section>
+
+      <section class="languages" id="languages">
+        <h2>Choose your language</h2>
+        <p>Three languages. More ways to connect with the world.</p>
+        <div class="language-grid">
+          <article class="language-card">
+            <div class="symbol" aria-hidden="true">🇬🇧</div>
+            <h3>English</h3>
+            <p>Communicate with confidence.</p>
+          </article>
+          <article class="language-card">
+            <div class="symbol" aria-hidden="true">🇫🇷</div>
+            <h3>French</h3>
+            <p>Discover a language of culture.</p>
+          </article>
+          <article class="language-card">
+            <div class="symbol" aria-hidden="true">🇵🇹</div>
+            <h3>Portuguese</h3>
+            <p>Connect across continents.</p>
+          </article>
+        </div>
+      </section>
+    </div>
   </main>
+
+  <footer>© 2026 <strong>Kilele Language School</strong>. Learn without limits.</footer>
 </body>
 </html>
